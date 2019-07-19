@@ -1,6 +1,8 @@
 .home {
   
-  
+  @media @mobile {
+    width: 90%
+  }
   .header {
     padding-bottom: 2rem;
     border-bottom: 2px dashed @navigation-border;
@@ -20,19 +22,35 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 98%
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%
+        }
       }
     }
   }
@@ -41,20 +59,38 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: 100%
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        width: 100%
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        width: 100%
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%
+    }
 
     img {
       border-radius: 10px;
@@ -65,11 +101,31 @@
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    @media @mobile {
+      flex-direction:column;
+      width: 100%;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      
+      @media @mobile {
+        margin:3% auto;
+        width: 80%
+      }
+  
+
+    .btn {
+      .signUpButton(@shallow-ocean, 2rem);
+
+      @media @mobile {
+        width: 100%
+      }
+
+      }
     }
   }
 }// home
